@@ -10,6 +10,10 @@
 	<script>
 	function secondHighest(arr) {
 	//Write your code here
+	const allEqual = arr => arr.every(val => val === arr[0]);
+	if (allEqual(arr) ) {
+			return -Infinity
+		}
 	  if (arr.length<=1) {
 			  return -Infinity;
 			  }
