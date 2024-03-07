@@ -9,24 +9,17 @@
 <body>	
 	<script>
 	function secondHighest(arr) {
-  //Write your code here
-	if (arr.length<=1) {
-			return -Infinity;
-			}
-	else{
-		 for(let i=0;i<arr.length;i++){
-    for(let j=0;j<arr.length-i-1;j++){
-       if(arr[j]>arr[j+1]){
-        let temp=arr[j];
-        arr[j]= arr[j+1];
-        arr[j+1]=temp;
-       } 
-    }
-   }
-   return arr[arr.length-2];
-}
-}
-
+	//Write your code here
+	  if (arr.length<=1) {
+			  return -Infinity;
+			  }
+	  else{
+		   arr.sort((a,b)=>{
+			return a-b;
+		   });
+		  } 
+		  return arr[arr.length-2];
+	  } 
 function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
@@ -38,10 +31,9 @@ function Main() {
 		Main();
 	</script>
 	
-
     <script type="text/javascript" src="./script.js">
 </script>
-
+	
 </body>
 
 </html>
